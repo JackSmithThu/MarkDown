@@ -72,13 +72,19 @@ server.3=127.0.0.1:2890:3890
 
 这里对zoo.cfg中的内容进行简要地说明：
 
-> tickTime为客户端与服务器之间或服务器互相之间的心跳间隔，以ms为单位。
-> initLimit为leader与follower进行初始连接时最多能够容忍的心跳数。
-> syncLimit为follower与leader请求和应答之间最多能容忍的心跳数。
-> dataDir为数据文件目录。
-> dataLogDir为日志文件目录。
-> clientPort为客户端连接服务器的端口，zookeeper监听此接口接收客户端访问请求。
-> 最后三行为集群中每个服务器的ip和端口号。前一个端口为leader和follower通信端口，后一个端口为选举新leader时所用的端口。一般来说，在多台电脑的情况下，每台服务器上的端口配置是一样的。不过我们现在使用同一台电脑配置三个server，为了避免冲突，只能把它们改成不一样。
+**tickTime**为客户端与服务器之间或服务器互相之间的心跳间隔，以ms为单位。
+
+**initLimit**为leader与follower进行初始连接时最多能够容忍的心跳数。
+
+**syncLimit**为follower与leader请求和应答之间最多能容忍的心跳数。
+
+**dataDir**为数据文件目录。
+
+**dataLogDir**为日志文件目录。
+
+**clientPort**为客户端连接服务器的端口，zookeeper监听此接口接收客户端访问请求。
+
+**最后三行**为集群中每个服务器的ip和端口号。前一个端口为leader和follower通信端口，后一个端口为选举新leader时所用的端口。一般来说，在多台电脑的情况下，每台服务器上的端口配置是一样的。不过我们现在使用同一台电脑配置三个server，为了避免冲突，只能把它们改成不一样。
 
 ## 1.7.复制server1中的内容到server2和server3中，并修改相应配置
 
@@ -90,39 +96,45 @@ zoo.cfg文件需要修改dataDir，dataLogDir和clientPort。修改后的三个�
 
 server1：
 
-> tickTime=2000
-> initLimit=5
-> syncLimit=2
-> dataDir=D:/WorkSpace/zookeeper/server1/data
-> dataLogDir=D:/WorkSpace/zookeeper/server1/dataLog
-> clientPort=2181
-> server.1=127.0.0.1:2888:3888
-> server.2=127.0.0.1:2889:3889
-> server.3=127.0.0.1:2890:3890
+```
+tickTime=2000
+initLimit=5
+syncLimit=2
+dataDir=D:/WorkSpace/zookeeper/server1/data
+dataLogDir=D:/WorkSpace/zookeeper/server1/dataLog
+clientPort=2181
+server.1=127.0.0.1:2888:3888
+server.2=127.0.0.1:2889:3889
+server.3=127.0.0.1:2890:3890
+```
 
 server2：
 
-> tickTime=2000
-> initLimit=5
-> syncLimit=2
-> dataDir=D:/WorkSpace/zookeeper/server2/data
-> dataLogDir=D:/WorkSpace/zookeeper/server2/dataLog
-> clientPort=2182
-> server.1=127.0.0.1:2888:3888
-> server.2=127.0.0.1:2889:3889
-> server.3=127.0.0.1:2890:3890
+```
+tickTime=2000
+initLimit=5
+syncLimit=2
+dataDir=D:/WorkSpace/zookeeper/server2/data
+dataLogDir=D:/WorkSpace/zookeeper/server2/dataLog
+clientPort=2182
+server.1=127.0.0.1:2888:3888
+server.2=127.0.0.1:2889:3889
+server.3=127.0.0.1:2890:3890
+```
 
 server3：
 
-> tickTime=2000
-> initLimit=5
-> syncLimit=2
-> dataDir=D:/WorkSpace/zookeeper/server3/data
-> dataLogDir=D:/WorkSpace/zookeeper/server3/dataLog
-> clientPort=2183
-> server.1=127.0.0.1:2888:3888
-> server.2=127.0.0.1:2889:3889
-> server.3=127.0.0.1:2890:3890
+```
+tickTime=2000
+initLimit=5
+syncLimit=2
+dataDir=D:/WorkSpace/zookeeper/server3/data
+dataLogDir=D:/WorkSpace/zookeeper/server3/dataLog
+clientPort=2183
+server.1=127.0.0.1:2888:3888
+server.2=127.0.0.1:2889:3889
+server.3=127.0.0.1:2890:3890
+```
 
 ## 1.8.启动服务器
 
