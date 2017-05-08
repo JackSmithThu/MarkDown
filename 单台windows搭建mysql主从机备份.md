@@ -17,21 +17,21 @@ categories: 技术
 
 在你喜欢的位置（我的是D:\WorkSpace\mysql\）建立两个文件夹，分别叫 mysql5601 和 mysql5602。将刚才下载到的 zip 文件分别复制到这两个文件夹中解压。
 
-![](D:\WorkSpace\images\201705080001.png)
+![](https://raw.githubusercontent.com/JackSmithThu/MarkdownPhotos/master/201705080001.png)
 
 解压完成之后应该是这个样子的：
 
-![](D:\WorkSpace\images\201705080002.png)
+![](https://raw.githubusercontent.com/JackSmithThu/MarkdownPhotos/master/201705080002.png)
 
 ### 1.3.修改响应配置文件
 
 分别打开 mysql5601 和 mysql5602 ，修改 my-default.ini 文件
 
-![](D:\WorkSpace\images\201705080003.png)
+![](https://raw.githubusercontent.com/JackSmithThu/MarkdownPhotos/master/201705080003.png)
 
 打开  my-default.ini 文件，修改下图中标记的位置
 
-![](D:\WorkSpace\images\201705080004.png)
+![](https://raw.githubusercontent.com/JackSmithThu/MarkdownPhotos/master/201705080004.png)
 
 basedir 为 mysql 的解压目录，datadir 为 basedir\data，两个实例的 port 分别设置为 3306 和 3307，server_id 分别设置为 1 和 2。
 
@@ -59,25 +59,25 @@ server_id = 2
 
 在 windows 搜索框中搜索 cmd，得到结果如下图所示：
 
-![](D:\WorkSpace\images\201705080005.png)
+![](https://raw.githubusercontent.com/JackSmithThu/MarkdownPhotos/master/201705080005.png)
 
 按下 Ctrl + Shift + Enter，以管理员身份进入 cmd，进入之后，如下图所示：
 
-![](D:\WorkSpace\images\201705080006.png)
+![](https://raw.githubusercontent.com/JackSmithThu/MarkdownPhotos/master/201705080006.png)
 
 进入到 D:\WorkSpace\mysql\msql5601\bin 目录下，输入 mysqld install MySQL1  --defaults-file="D:\WorkSpace\mysql\msql5601\my-default.ini" ：
 
-![](D:\WorkSpace\images\201705080007.png)
+![](https://raw.githubusercontent.com/JackSmithThu/MarkdownPhotos/master/201705080007.png)
 
 因为我已经安装过了，所以会显示 The service already exists! ，第一次安装应该显示 Service successfully installed.
 
 【MySQL1】是服务的名称，安装成功后，在 windows 搜索里输入【服务】，可以在服务中找到它。
 
-![](D:\WorkSpace\images\201705080008.png)
+![](https://raw.githubusercontent.com/JackSmithThu/MarkdownPhotos/master/201705080008.png)
 
 安装成功后，输入 net start MySQL1，启动这个服务：
 
-![](D:\WorkSpace\images\201705080009.png)
+![](https://raw.githubusercontent.com/JackSmithThu/MarkdownPhotos/master/201705080009.png)
 
 然后用同样的方法启动另一个服务，这回叫MySQL2：
 
@@ -85,7 +85,7 @@ server_id = 2
 
 安装成功后，输入 net start MySQL2，启动这个服务，得到结果如下图所示：
 
-![](D:\WorkSpace\images\201705080010.png)
+![](https://raw.githubusercontent.com/JackSmithThu/MarkdownPhotos/master/201705080010.png)
 
 两个服务都跑起来之后，我们就可以进入下一步：实现主从备份了。
 
@@ -99,29 +99,29 @@ server_id = 2
 
 进入 D:\WorkSpace\mysql\msql5602\bin 目录下，输入 mysql -uroot -proot -P3306
 
-![](D:\WorkSpace\images\201705080011.png)
+![](https://raw.githubusercontent.com/JackSmithThu/MarkdownPhotos/master/201705080011.png)
 
 在这个命令中，前一个小写的 p 是密码（password）的 p，后一个大写的 P 是端口（Port）的 P。
 
 然后输入：create database test;
 
-![](D:\WorkSpace\images\201705080012.png)
+![](https://raw.githubusercontent.com/JackSmithThu/MarkdownPhotos/master/201705080012.png)
 
 我的因为已经建立过了，所以会报出 database exists。
 
 输入：show databases; 
 
-![](D:\WorkSpace\images\201705080013.png)
+![](https://raw.githubusercontent.com/JackSmithThu/MarkdownPhotos/master/201705080013.png)
 
 显示现有的 database，我们可以看到，test已经在里面了。
 
 接下来我们建立从机的数据库，打开一个cmd，进入 D:\WorkSpace\mysql\msql5602\bin 目录下，输入 mysql -uroot -proot -P3307
 
-![](D:\WorkSpace\images\201705080014.png)
+![](https://raw.githubusercontent.com/JackSmithThu/MarkdownPhotos/master/201705080014.png)
 
 然后输入：create database test;
 
-![](D:\WorkSpace\images\201705080015.png)
+![](https://raw.githubusercontent.com/JackSmithThu/MarkdownPhotos/master/201705080015.png)
 
 这样两个数据库就建立好了。
 
@@ -177,11 +177,11 @@ sql_mode=NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES
 
 Windows 搜索【服务】，重启 MySQL1 服务。
 
-![](D:\WorkSpace\images\201705080016.png)
+![](https://raw.githubusercontent.com/JackSmithThu/MarkdownPhotos/master/201705080016.png)
 
 重启之后，你会看到 D:\WorkSpace\mysql\msql5601 目录下多出了两个文件（因为我重启过三遍所以多出来四个）：
 
-![](D:\WorkSpace\images\201705080017.png)
+![](https://raw.githubusercontent.com/JackSmithThu/MarkdownPhotos/master/201705080017.png)
 
 ### 2.3.给要连接的从服务器设置权限
 
@@ -195,13 +195,13 @@ grant replication slave,reload,super on *.* to slave@10.0.76.192 identified by '
 
 注意，10.0.76.192是我的 ip 地址，这个地址需要改成你自己的 ip 地址（如果不是一台机器则要改成从机的 ip 地址）。查询 ip 地址的方法很简单，打开 cmd，输入 ipconfig 即可。
 
-![](D:\WorkSpace\images\201705080018.png)
+![](https://raw.githubusercontent.com/JackSmithThu/MarkdownPhotos/master/201705080018.png)
 
 ### 2.4.输入命令 show master status;      
 
 找到 File 和 Position 的值记录下来，这些值后面会用到。
 
-![](D:\WorkSpace\images\201705080019.png)
+![](https://raw.githubusercontent.com/JackSmithThu/MarkdownPhotos/master/201705080019.png)
 
 ### 2.5.修改从库配置文件
 
@@ -265,11 +265,11 @@ change master to master_host='10.0.76.192',master_user='slave',master_password='
 
 输入：start slave;
 
-![](D:\WorkSpace\images\201705080020.png)
+![](https://raw.githubusercontent.com/JackSmithThu/MarkdownPhotos/master/201705080020.png)
 
 然后输入：show slave status\G   （没有分号）
 
-![](D:\WorkSpace\images\201705080021.png)
+![](https://raw.githubusercontent.com/JackSmithThu/MarkdownPhotos/master/201705080021.png)
 
 看是否有以下两行：
 
@@ -302,7 +302,7 @@ mysql -uroot -proot -P3307（从机）
 
 得到结果如下图所示：
 
-![](D:\WorkSpace\images\201705080022.png)
+![](https://raw.githubusercontent.com/JackSmithThu/MarkdownPhotos/master/201705080022.png)
 
 上面的操作只是在主机上的 test 数据库中建立了一张名为 table1 的表。
 
@@ -312,7 +312,7 @@ mysql -uroot -proot -P3307（从机）
 
 得到结果如下图所示：
 
-![](D:\WorkSpace\images\201705080023.png)
+![](https://raw.githubusercontent.com/JackSmithThu/MarkdownPhotos/master/201705080023.png)
 
 可以看到，两个数据库的数据已经开始自动同步了。
 
