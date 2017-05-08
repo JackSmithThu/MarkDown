@@ -65,7 +65,11 @@ server_id = 2
 
 ![](https://raw.githubusercontent.com/JackSmithThu/MarkdownPhotos/master/201705080006.png)
 
-进入到 D:\WorkSpace\mysql\msql5601\bin 目录下，输入 mysqld install MySQL1  --defaults-file="D:\WorkSpace\mysql\msql5601\my-default.ini" ：
+进入到 D:\WorkSpace\mysql\msql5601\bin 目录下，输入：
+
+```
+mysqld install MySQL1  --defaults-file="D:\WorkSpace\mysql\msql5601\my-default.ini" ：
+```
 
 ![](https://raw.githubusercontent.com/JackSmithThu/MarkdownPhotos/master/201705080007.png)
 
@@ -81,7 +85,11 @@ server_id = 2
 
 然后用同样的方法启动另一个服务，这回叫MySQL2：
 
-进入到 D:\WorkSpace\mysql\msql5602\bin 目录下，输入 mysqld install MySQL2  --defaults-file="D:\WorkSpace\mysql\msql5602\my-default.ini" 
+进入到 D:\WorkSpace\mysql\msql5602\bin 目录下，输入：
+
+```
+mysqld install MySQL2  --defaults-fil e= "D:\WorkSpace\mysql\msql5602\my-default.ini" 
+```
 
 安装成功后，输入 net start MySQL2，启动这个服务，得到结果如下图所示：
 
@@ -257,7 +265,9 @@ sql_mode=NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES
 
 进入 mysql 命令行模式，输入：
 
+```
 change master to master_host='10.0.76.192',master_user='slave',master_password='root', master_log_file='mysql-bin.000003',master_log_pos=120;
+```
 
 注意：这里输入的 mysql-bin.000003 和 120 请替换为步骤2.4中查询出来的值，master_host 替换为你自己的 ip。 
 
