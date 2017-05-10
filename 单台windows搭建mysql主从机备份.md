@@ -197,7 +197,9 @@ Windows 搜索【服务】，重启 MySQL1 服务。
 
 进入 mysql 命令行模式，输入
 
+```
 grant replication slave,reload,super on *.* to slave@10.0.76.192 identified by 'root';   
+```
 
 给主机10.0.76.192添加权限，用户名：slave，密码：root；
 
