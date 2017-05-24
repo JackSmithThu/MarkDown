@@ -1,6 +1,6 @@
 ---
 title: 单台windows搭建redis集群
-date: 2017-05-05 14:02:38
+date: 2017-03-18 14:02:38
 tags: [Redis,Windows]
 categories: 技术
 ---

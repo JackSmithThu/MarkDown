@@ -1,6 +1,6 @@
 ---
 title: 单台windows搭建zookeeper和kafka集群
-date: 2017-05-04 18:11:39
+date: 2017-04-04 18:11:39
 tags: [Kafka,Zookeeper,Windows]
 categories: 技术
 ---

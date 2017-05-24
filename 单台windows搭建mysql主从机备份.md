@@ -1,6 +1,6 @@
 ---
 title: 单台windows搭建mysql主从机备份
-date: 2017-05-08 14:04:11
+date: 2017-04-08 14:04:11
 tags: [MySQL,Windows]
 categories: 技术
 ---
