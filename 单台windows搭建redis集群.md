@@ -121,11 +121,16 @@ cd D:\WorkSpace\redis
 redis-trib.rb create --replicas 1 127.0.0.1:7000 127.0.0.1:7001 127.0.0.1:7002 127.0.0.1:7003 127.0.0.1:7004 127.0.0.1:7005
 
 ```
-双击cluster.bat，黑框框一闪而过。没关系，应该是运行成功了。
+双击cluster.bat，在询问是否要接受配置时输入“yes”。
 
-![](https://raw.githubusercontent.com/JackSmithThu/MarkdownPhotos/master/201705050014.png)
+![](https://raw.githubusercontent.com/JackSmithThu/MarkdownPhotos/master/201705240001.png)
+
+得到结果如下所示：
+
+![](https://raw.githubusercontent.com/JackSmithThu/MarkdownPhotos/master/201705240002.png)
 
 ### 2.5.测试一下
+
 打开cmd，输入：redis-cli.exe -c -p 7000
 再打开一个cmd，输入redis-cli.exe -c -p 7001
 它们连接了不同的实例，我们现在要测试以下它们的数据是否是同步的。
