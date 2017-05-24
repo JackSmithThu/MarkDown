@@ -5,11 +5,11 @@ tags: [Redis,MySQL,Canal,Windows]
 categories: 技术
 ---
 
-## 1.什么是cannal
+## 1.什么是canal
 
 ![](https://raw.githubusercontent.com/JackSmithThu/MarkdownPhotos/master/201705100001.jpg)
 
-cannal 的原理相对比较简单：
+canal 的原理相对比较简单：
 
 1. canal 模拟 mysql slave 的交互协议，伪装自己为mysql slave，向 mysql master发送 dump 协议
 2. mysql master 收到 dump 请求，开始推送 binary log 给 slave (也就是 canal)
