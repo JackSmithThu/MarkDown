@@ -59,7 +59,7 @@ $ docker run hello-world
 
 ### 2.1.账号注册
 
-首先你需要一个 Docker 的账号，登陆：https://www.docker.com/
+首先你需要一个 Docker 的账号，登录：https://www.docker.com/
 
 ![](https://raw.githubusercontent.com/JackSmithThu/MarkdownPhotos/master/201706070005.png)
 
