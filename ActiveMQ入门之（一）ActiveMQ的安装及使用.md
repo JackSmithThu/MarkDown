@@ -284,7 +284,9 @@ public class JMSConsumer {
 
 
 
+## 4.参考链接
 
+[深入浅出JMS(一)--JMS基本概念](http://blog.csdn.net/jiuqiyuliang/article/details/46701559)
 
 
 

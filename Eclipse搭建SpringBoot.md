@@ -85,12 +85,9 @@ categories: 技术
 
 ## 5.参考链接：
 
-Eclipse中创建新的Spring Boot项目：
-http://blog.csdn.net/clementad/article/details/51334064
-maven阿里云中央仓库：
-http://blog.csdn.net/u010717403/article/details/52188496
-Maven2的配置文件settings.xml：
-http://www.cnblogs.com/yakov/archive/2011/11/26/maven2_settings.html
+[Eclipse中创建新的Spring Boot项目](http://blog.csdn.net/clementad/article/details/51334064)
+[maven阿里云中央仓库](http://blog.csdn.net/u010717403/article/details/52188496)
+[Maven2的配置文件settings.xml](http://www.cnblogs.com/yakov/archive/2011/11/26/maven2_settings.html)
 
 ## 6.Eclipse版本：eclipse-jee-neon-2-win32-x86_64.zip
 
