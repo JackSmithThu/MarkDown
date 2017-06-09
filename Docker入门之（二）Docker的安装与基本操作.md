@@ -246,3 +246,8 @@ $ vim a.txt
 [Docker 命令大全](http://www.runoob.com/docker/docker-command-manual.html)
 
 [Docker手册](http://www.docker.org.cn/book/)
+
+
+
+## 6.操作系统 Ubuntu 16.04
+
