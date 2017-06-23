@@ -22,7 +22,7 @@ categories: 技术
 > mysql -uroot -proot 
 ```
 
-![](E:/images/201706230003.png)
+![](https://raw.githubusercontent.com/JackSmithThu/MarkdownPhotos/master/201706230003.png)
 
 ### 1.2.建立数据库
 
@@ -32,7 +32,7 @@ categories: 技术
 > create database yun;
 ```
 
-![](E:/images/201706230004.png)
+![](https://raw.githubusercontent.com/JackSmithThu/MarkdownPhotos/master/201706230004.png)
 
 因为我之前已经建立过了，所以会显示 **ERROR**。正常情况下应该显示：
 
@@ -46,7 +46,7 @@ Query OK, 1 row affected (0.01 sec)
 > show databases;
 ```
 
-![](E:/images/201706230005.png)
+![](https://raw.githubusercontent.com/JackSmithThu/MarkdownPhotos/master/201706230005.png)
 
 可以看到我们刚才建立的数据库 **yun**。
 
@@ -59,7 +59,7 @@ Query OK, 1 row affected (0.01 sec)
 > CREATE TABLE IF NOT EXISTS user (id INT(11),name VARCHAR(255));
 ```
 
-![](E:/images/201706230006.png)
+![](https://raw.githubusercontent.com/JackSmithThu/MarkdownPhotos/master/201706230006.png)
 
 ### 1.4.向表中插入数据
 
@@ -70,7 +70,7 @@ Query OK, 1 row affected (0.01 sec)
 > INSERT INTO user (id,name) values(2,"Nacu");
 ```
 
-![](E:/images/201706230007.png)
+![](https://raw.githubusercontent.com/JackSmithThu/MarkdownPhotos/master/201706230007.png)
 
 查询一下表中是否有插入的数据：
 
@@ -78,7 +78,7 @@ Query OK, 1 row affected (0.01 sec)
 > SELECT * FROM user;
 ```
 
-![](E:/images/201706230008.png)
+![](https://raw.githubusercontent.com/JackSmithThu/MarkdownPhotos/master/201706230008.png)
 
 到了这一步，数据库就搭建完成了。接下来我们来搭建网站。
 
@@ -90,7 +90,7 @@ Query OK, 1 row affected (0.01 sec)
 
 按照下图的修改项目的包名，并添加新的包和类。
 
-![](E:/images/201706230009.png)
+![](https://raw.githubusercontent.com/JackSmithThu/MarkdownPhotos/master/201706230009.png)
 
 #### 2.1.1.YunAppalication.java 
 
@@ -380,7 +380,7 @@ spring:
 
 右击 **YunApplication.java**，选择 **Run as**，然后选择 **Java Application**。
 
-![](E:/images/201706230010.png)
+![](https://raw.githubusercontent.com/JackSmithThu/MarkdownPhotos/master/201706230010.png)
 
 在浏览器输入：
 
@@ -390,11 +390,11 @@ localhost:8080/database/1
 
 即可查询数据库中 1 号用户的名字。
 
-![](E:/images/201706230011.png)
+![](https://raw.githubusercontent.com/JackSmithThu/MarkdownPhotos/master/201706230011.png)
 
 当然，你也可以查询 2 号用户。
 
-![](E:/images/201706230012.png)
+![](https://raw.githubusercontent.com/JackSmithThu/MarkdownPhotos/master/201706230012.png)
 
 到了这一步，向 SpringBoot 集成 Mybatis 基本就完成了。
 
