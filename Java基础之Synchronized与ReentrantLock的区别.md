@@ -14,7 +14,7 @@ categories: 技术
 1. 原因在于，编译程序通常会尽可能的进行优化 **synchronized**，
 2. **synchronized** 另外可读性非常好。
 
-###　1.2.ReentrantLock
+### 1.2.ReentrantLock
 
 **ReentrantLock** 适用于资源竞争比较激烈的情况。
 

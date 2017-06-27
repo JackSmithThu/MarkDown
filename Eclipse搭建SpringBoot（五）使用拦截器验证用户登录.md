@@ -187,11 +187,11 @@ public class YunApplication {
 localhost:8080
 ```
 
-![](E:/images/201706260001.png)
+![](https://raw.githubusercontent.com/JackSmithThu/MarkdownPhotos/master/201706260001.png)
 
 然后敲击回车访问，发现网站自动跳转到 login 页面：
 
-![](E:/images/201706260002.png)
+![](https://raw.githubusercontent.com/JackSmithThu/MarkdownPhotos/master/201706260002.png)
 
 再次输入：
 
@@ -201,7 +201,7 @@ localhost:8080
 
 然后回车访问，发现已经可以正常地访问了：
 
-![](E:/images/201706260003.png)
+![](https://raw.githubusercontent.com/JackSmithThu/MarkdownPhotos/master/201706260003.png)
 
 ## 4.参考链接
 
