@@ -1,5 +1,5 @@
 ---
-title: Eclipse搭建SpringBoot
+title: Eclipse搭建SpringBoot（一）HelloWorld
 date: 2017-03-28 15:44:49
 tags: [SpringBoot,Ecilpse]
 categories: 技术
