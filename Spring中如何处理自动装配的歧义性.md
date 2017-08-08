@@ -1,5 +1,5 @@
 ---
-title: Spring如何处理自动装配的歧义性
+title: Spring中如何处理自动装配的歧义性
 date: 2017-06-25 00:28:14
 tags: [Spring,Spring实战]
 categories: 技术
