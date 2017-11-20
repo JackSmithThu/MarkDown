@@ -138,7 +138,7 @@ categories: 产品
 
 ### 2.2.泛微 VS Salesforce
 
-![](https://raw.githubusercontent.com/JackSmithThu/MarkdownPhotos/master/泛微-Salesforce.jpg)
+![](https://raw.githubusercontent.com/JackSmithThu/MarkdownPhotos/master/fw-salesforce.jpg)
 
 泛微的月流量大概是 500 K 左右，跟纷享销客大概是一个量级。不过 Salesforce 这也太多了吧？ 100 多M？仔细核对了一下，force.com 下面有很多个子域名，其中最有可能和 Salesforce 相关的是 ：lightning.force.com。
 
